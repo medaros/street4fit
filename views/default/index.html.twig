@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keywords" content="sport, sports, street 4 fit, street4fit">
+        <meta name="author" content="Sonia Bougamha, Mohamed Aarous, Julie Buisson, Assa Traore, Magali Piszczyglowa, Yvette Toukam">
+        <meta name="description" content="view street4fit">
+		<!-- CDN BOOSTRAP -->
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css" crossorigin="anonymous">
+        <!-- FONTAWESOME -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <title>Street 4 Fit</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="#"><img src="../img/s4f_logo_nav.png" style="width: 7rem;" alt="logo street4fit"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+         
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Accueil </a><!-- Le lien vers l'index, form inscription -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> A Propos </a><!-- A remplir par street for fit -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> Nous contacter </a><!-- Coordonnées S4F et form de contact -->
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            {% if visitor == connected %}
+                <nav class="navbar navbar-expand-lg navbar-light bg-light ">       
+                    <div class="collapse navbar-collapse d-flex" >
+                        <ul class="navbar-nav mr-auto justify-content-between">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"> Ajouter</a><!-- Le lien vers l'index, form inscription -->
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"> Modifier </a><!-- A remplir par street for fit -->
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"> Supprimer </a><!-- Coordonnées S4F et form de contact -->
+                            </li>
+                        </ul>   
+                     </div>
+                </nav>
+            {% endif %}
+        </header>
+
+        <h1 class="text-center m-5 text-primary">Street 4 Fit</h1>
+
+        <div class="container jumbotron jumbotron-fluid mt-4 mb-4">         
+            
+            <h2 class="text-center m-3">{% block title %} Inscription {% endblock %}</h2>
+            {% block body %}
+            
+                <form class="form m-4" method="post" action="" enctype="multipart/form-data">
+                    <fieldset>
+
+                        <div class="form-group">
+                            <label for="exampleInputFile"> Nom </label>
+                            <input type="text" class="form-control" aria-describedby="fileHelp" placeholder="Entrez votre nom">   
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputFile"> Prénom </label>
+                            <input type="text" class="form-control" aria-describedby="fileHelp" placeholder="Entrez votre Prénom">   
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1"> Adresse email </label>
+                            <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Entrez votre adresse mail">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1"> Mot de passe </label>
+                            <input type="password" class="form-control" placeholder="Entrez votre mot de passe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputFile"> Photo </label>
+                            <input type="file" class="form-control-file" aria-describedby="fileHelp">   
+                        </div>        
+                
+                        <button type="submit" class="btn btn-success btn-lg">S'inscrire</button>
+                    </fieldset>
+                </form>  
+
+            {% endblock %}
+        </div><!-- fin jumbotron -->
+        
+        <footer class="col-md-12 text-center">
+            <p>®STREET4FIT {{'now'|date('Y')}} 
+            <a href="https://www.street4fit.fr/"><img src="../img/s4f_footer.png" alt="contact street4fit"></a></p>   
+        </footer>
+
+	<!-- SCRIPT BOOSTRAP -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+	
+
+</html>
+
+<!--  
+rouge = #ed2346
+noir/bleu = #172332
+gris foncé = #424242
+gis clair = #f5f5f5
+-->
