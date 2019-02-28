@@ -1,0 +1,5 @@
+s4_f_app:
+    path: /
+    defaults: { _controller: ENTAppBundle:default:index }
+    requirements:
+        page: \d*

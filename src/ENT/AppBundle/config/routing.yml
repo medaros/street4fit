@@ -1,0 +1,6 @@
+ent_app:
+    path: /
+    defaults: { _controller: S4FAppBundle:default:index }
+    requirements:
+        page: \d*
+
