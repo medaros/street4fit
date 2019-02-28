@@ -1,0 +1,13 @@
+ent_app:
+    resource: "@ENTAppBundle/Controller/"
+    type:     annotation
+    prefix:   /entreprise
+
+s4_f_app:
+    resource: "@S4FAppBundle/Controller/"
+    type:     annotation
+    prefix:   /street4fit
+
+# app:
+#     resource: '@AppBundle/Controller/'
+#     type: annotation

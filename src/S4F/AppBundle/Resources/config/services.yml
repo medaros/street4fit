@@ -1,0 +1,4 @@
+services:
+#    s4_f_app.example:
+#        class: S4F\AppBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
