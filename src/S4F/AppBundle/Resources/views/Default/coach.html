@@ -1,0 +1,42 @@
+<!-- {# {% extends "S4FAppBundle::index.html.twig" %}
+
+  {% block title %} Coach : {{coach.name}} {% endblock %}
+
+{% block body %} #} -->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keywords" content="view street4fit">
+        <meta name="author" content="Sonia Bougamha">
+        <meta name="description" content="sport, sports, street 4 fit, street4fit">
+		<!-- CDN BOOSTRAP -->
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css" crossorigin="anonymous">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <title>Application Street 4 Fit</title>
+    </head>
+
+    <body>
+      <!-- Combo box -->
+
+ 
+      <div class="card mb-3">
+        <h3 class="card-header">{{coach.nom}}{{coach.prenom}}</h3>
+
+        <div class="card-body">
+          <h5 class="card-title">{{coach.sport}}</h5>
+        </div>
+
+        <img style="height: 200px; width: 100%; display: block;" src="{{coach.photo}}">
+            
+        <div class="card-body">
+          <p class="card-text">{{ coach.diplome}}</p>
+        </div>
+ 
+      </div>
+    {% endblock %}
+  </body>
+</html>
